@@ -23,9 +23,14 @@ class LoginController extends Controller
     /**
      * Where to redirect users after login.
      *
-     * @var string
+     * @var  Illuminate\Support\Facades\Auth $user
+     * @return string
      */
-    protected $redirectTo = '/home';
+
+    protected function redirectTo()
+    {
+        return route('profile', auth()->user()->name);
+    }
 
     /**
      * Create a new controller instance.
@@ -34,6 +39,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest', ['except' => 'logout']);
     }
 }

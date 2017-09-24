@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Policies;
+
 use App\Thread;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -8,6 +9,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 class ThreadPolicy
 {
     use HandlesAuthorization;
+
     /**
      * Determine whether the user can update the thread.
      *

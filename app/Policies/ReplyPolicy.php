@@ -9,6 +9,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 class ReplyPolicy
 {
     use HandlesAuthorization;
+
     /**
      * Determine if the authenticated user has permission to update a reply.
      *

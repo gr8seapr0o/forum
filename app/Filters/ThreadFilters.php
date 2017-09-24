@@ -55,5 +55,5 @@ class ThreadFilters extends Filters
             ->join('replies', 'threads.id', '=', 'replies.thread_id')
             ->distinct()
             ->orderBy('replies_count', 'desc');*/
-    }
+    }    
 }

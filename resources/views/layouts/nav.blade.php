@@ -45,10 +45,10 @@
                        aria-expanded="false">Рубрики <span class="caret"></span></a>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-                        <li>
-                            <a href="/channels/create">Новая рубрика</a>
-                        </li>
-                        <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="/channels/create">Новая рубрика</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
                         @foreach ($channels as $channel)
                             <li><a href="/threads/{{ $channel->slug }}">{{ $channel->name }}</a></li>
                         @endforeach
